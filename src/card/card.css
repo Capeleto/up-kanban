@@ -1,0 +1,35 @@
+.card-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 8px;
+}
+
+.move {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.move-disabled {
+  cursor: default;
+  color: #c2c2c2;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 8px;
+  margin-top: 16px;
+}
+
+.description {
+  color: #757575;
+  font-size: 16px;
+}

@@ -1,0 +1,21 @@
+.header {
+  height: 88px;
+  background-color: #00a19a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.header > span {
+  color: white;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 24px;
+  justify-content: center;
+}
