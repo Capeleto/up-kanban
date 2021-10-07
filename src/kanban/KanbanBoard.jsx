@@ -14,7 +14,12 @@ const MOCK_COLUMNS = [
     title: "Column 2",
     color: "#00807B",
     cards: [
-      { id: "id2", title: "Card Title 2", description: "Card Description 2" },
+      {
+        id: "id2",
+        title: "Card Title 2Card Title 2 Card Title 2Card Title 2 Card Title 2",
+        description:
+          "Card Description 2 Card Description 2 Card Description 2 Card Description 2 Card Description 2 Card Description 2 Card Description 2",
+      },
     ],
   },
   {
@@ -67,19 +72,22 @@ function KanbanBoard() {
       "Enter data in the following format: title; description",
       "default title; default description"
     );
-    const [title, description] = value.split(";");
 
-    const newColumns = columns.map((column, index) => {
-      if (index === addIndex) {
-        return {
-          ...column,
-          cards: [...column.cards, { id: generateId(), title, description }],
-        };
-      }
-      return column;
-    });
+    if (typeof value === "string" && value.includes(";")) {
+      const [title, description] = value.split(";");
 
-    setColumns(newColumns);
+      const newColumns = columns.map((column, index) => {
+        if (index === addIndex) {
+          return {
+            ...column,
+            cards: [...column.cards, { id: generateId(), title, description }],
+          };
+        }
+        return column;
+      });
+
+      setColumns(newColumns);
+    }
   }
 
   return columns.map(({ cards = [], ...rest }, index) => {

@@ -2,6 +2,7 @@
   margin: 0 16px 16px 0;
   background-color: #f3f3f3;
   height: fit-content;
+  max-width: 336px;
 }
 
 .title {
